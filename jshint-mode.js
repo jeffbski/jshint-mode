@@ -13,6 +13,8 @@ var http = require('http'),
     JSLINT = require('./jslint'),
     JSHINT = require('./jshint');
 
+var JSHINT_OPTIONS = require('./jshint-mode-options').getOptions(); //JJB - use .jshintrc options from project and home
+
 var hinters = {
   jshint: JSHINT.JSHINT,
   jslint: JSLINT.JSLINT
@@ -43,7 +45,7 @@ function outputErrors(errors) {
 }
 
 function lintify(mode, sourcedata, filename) {
-  var passed = hinters[mode](sourcedata, {});
+  var passed = hinters[mode](sourcedata, JSHINT_OPTIONS); //JJB - use hint options
   return passed ? "js: No problems found in " + filename + "\n"
     : outputErrors(hinters[mode].errors);
 }

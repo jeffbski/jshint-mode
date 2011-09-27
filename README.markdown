@@ -7,6 +7,8 @@ Integrate [JSHint](http://jshint.com) into Emacs via a [node.js](http://nodejs.o
 
 jshint-mode was heavily inspired by Kevin Turners [lintnode](https://github.com/keturn/lintnode).
 
+Modified version of daleharvey/jshint-mode to utilize ~/.jshintrc and cwd()/.jshintrc options for jshint as the original cli did
+
 Building
 ========
 
@@ -14,9 +16,9 @@ Install via [npm](http://npmjs.org/)
 
     $ npm install jshint-mode
 
-or you can [download](https://github.com/daleharvey/jshint-mode/tarball/master) or clone
+or you can [download](https://github.com/jeffbski/jshint-mode/tarball/master) or clone
 
-    $ git clone git://github.com/daleharvey/jshint-mode.git
+    $ git clone git://github.com/jeffbski/jshint-mode.git
 
 Usage
 =====
