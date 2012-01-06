@@ -38,3 +38,9 @@ You can use M-x flymake-mode to turn flymake of and on, if you want to turn it o
 
     ;; Turns on flymake for all files which have a flymake mode
     (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+
+Status
+======
+
+ - 2012-01-06 - change to support node 0.6, process.ARGV should be process.argv
